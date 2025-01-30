@@ -97,22 +97,134 @@
             background-color: #ddd;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #000;
-            color: #fff;
+        /* Mobile Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
         }
 
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        /* Menu Bar */
+        .menu-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .menu-bar nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-bar nav a:hover {
+            color: #4a90e2; /* Hover color */
+        }
+
+        /* Fullscreen mobile menu */
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullscreen-menu.open {
+            transform: translateX(0);
+        }
+
+        .fullscreen-menu nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* Content Section */
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 9px;
+            font-size: 9px;
+            line-height: 10px;
+            background-color: rgba(0, 0, 0, 0);
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .menu-bar {
+                display: none; /* Hide default menu on mobile */
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Oddity Music</h1>
+        <!-- Hamburger Menu for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Menu Bar (Visible on desktop) -->
+    <div class="menu-bar">
         <nav>
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
@@ -120,7 +232,18 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </header>
+    </div>
+
+    <!-- Fullscreen Menu (Visible on mobile) -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="artists.html">Artists</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 
     <section class="section">
         <h2>Contact Us</h2>
@@ -140,7 +263,16 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Oddity Music. All rights reserved.</p>
+		<p>© ODDITY MUSIC. ALL RIGHTS RESERVED. 
+		<br class="mblock">ALL OF ODDITY MUSIC’S CONTENT IS COPYRIGHTED.</p>
     </footer>
+	<script>
+        function toggleMenu() {
+            const menuBar = document.querySelector('.menu-bar');
+            const hamburger = document.querySelector('.hamburger');
+            menuBar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

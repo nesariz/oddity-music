@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Oddity Music</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 60px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .product {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+
+        .product button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #ddd;
+        }
+		 .content {
+            flex: 1;
+            margin-top: 50px;
+        }
+
+        .artists-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .artist {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .artist img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .artist img:hover {
+            transform: scale(1.1);
+        }
+
+        .albums {
+            display: none;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 9px;
+			font-size: 9px;
+			line-height: 10px;
+            background-color: rgba(0, 0, 0, 0);
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oddity Music</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="artists.html">Artists</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2>Shop</h2>
+      
+ <div class="content">
+        <h2>NAMJOON</h2>
+        </div>
+		<div class="albums" id="artist1-albums">
+
+	   </div>
+	   <div class="products">
+            <div class="product">
+                <img src="https://i.pinimg.com/736x/0c/65/e7/0c65e77779165bcc9439fc76cea9da09.jpg" alt="Album 1">
+                <h3>2nd Album</h3>
+				<h3>「RIGHT PLACE, WRONG PERSON」</h3>
+                <p>$20.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/736x/c9/b5/0a/c9b50a1bbe9a0a1abb140e97c9f1694e.jpg" alt="Album 2">
+                <h3>1st Album</h3>
+				<h3>「INDIGO」</h3>
+                <p>$25.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/736x/e5/21/4d/e5214d51269e0957289604372a92dfa8.jpg" alt="Album 3">
+                <h3>2nd Single</h3>
+				<h3>「MONO」</h3>
+                <p>$25.00</p>
+                <button>Add to Cart</button>
+            </div>
+			<div class="product">
+                <img src="https://i.pinimg.com/736x/a1/f6/b7/a1f6b7f09361acd7fca9af9ffddee583.jpg" alt="Album 4">
+                <h3>1st Single</h3>
+				<h3>Bycicle</h3>
+                <p>$30.00</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+	
+
+    <footer>
+		<p>© ODDITY MUSIC. ALL RIGHTS RESERVED. 
+		<br class="mblock">ALL OF ODDITY MUSIC’S CONTENT IS COPYRIGHTED.</p>
+    </footer>
+</body>
+</html>
